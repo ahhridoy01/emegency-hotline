@@ -12,26 +12,27 @@
 <body>
     <!-- navbar -->
 
-    <div class="navbar bg-base-100 shadow p-3">
-        <div class="flex-1">
+    <div class=" flex justify-between items-center navbar bg-base-100 shadow p-3">
+        <div class="flex">
             <!-- Logo -->
-            <a class="flex items-center gap-2">
+            <div class="flex items-center gap-2">
                 <img class="h-12" src="assets/logo.png" alt="">
                 <span class="font-bold text-lg text-green-700">Emergency <br> Service</span>
-            </a>
+            </div>
         </div>
 
         <div class="flex gap-4">
             <!-- Heart count -->
-            <div class="flex items-center gap-1 rounded-lg">
-                <span class="text-red-500">❤️</span>
-                <span class="font-bold">0</span>
+            <div class="flex items-center gap-1 bg-gray-100 rounded-sm  w-15">
+                <span class="font-bold ml-3">0</span>
+                <img class="h-5" src="assets/heart.png" alt="">
+
             </div>
 
             <!-- Coin count -->
-            <div class="flex items-center gap-1">
-                <span>🪙</span>
-                <span id="coin-count" class="font-bold">100</span>
+            <div class="flex items-center gap-1 bg-gray-100 rounded-sm w-18">
+                <span id="coin-count" class="font-bold ml-3">100</span>
+                <img class="h-5" src="assets/coin.png" alt="">
             </div>
 
             <!-- Copy Button -->
@@ -238,7 +239,7 @@
                 <div class="card-body">
                     <div class="flex justify-between items-center">
                         <h2 class="font-bold text-lg">📜 Call History</h2>
-                         <button class="btn btn-success rounded-lg">Clear</button>
+                        <button class="btn btn-success rounded-lg">Clear</button>
                     </div>
                     <div class="divider"></div>
 
