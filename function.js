@@ -1,28 +1,34 @@
 // call button functionality 
+
 let coin = 100;
 
-function spendCoin(buttonID) {
-    document.getElementById(buttonID).addEventListener("click", function () {
+function spendCoin(buttonID, titleID, numberID) {
+    const button = document.getElementById(buttonID);
+
+    button.addEventListener("click", function () {
+        const title = document.getElementById(titleID).innerText;
+        const number = document.getElementById(numberID).innerText;
+
         if (coin >= 20) {
-            coin = coin - 20
-            const increseCoin = document.getElementById("coin-count")
-            increseCoin.innerText = coin
+            coin = coin - 20;
+            document.getElementById("coin-count").innerText = coin;
+            alert("Calling " + title + " - " + number);
+        } else {
+            alert("You have no coin!");
         }
-        else {
-            alert("You have no coin!")
-        }
-    })
+    });
 }
 
-spendCoin("call1")
-spendCoin("call2")
-spendCoin("call3")
-spendCoin("call4")
-spendCoin("call5")
-spendCoin("call6")
-spendCoin("call7")
-spendCoin("call8")
-spendCoin("call9")
+spendCoin("call1", "title1", "number1");
+spendCoin("call2", "title2", "number2");
+spendCoin("call3", "title3", "number3");
+spendCoin("call4", "title4", "number4");
+spendCoin("call5", "title5", "number5");
+spendCoin("call6", "title6", "number6");
+spendCoin("call7", "title7", "number7");
+spendCoin("call8", "title8", "number8");
+spendCoin("call9", "title9", "number9");
+
 
 // copy button functionality
 
@@ -84,7 +90,6 @@ function copyText(numberId) {
 
 //   call history functionality
 
-
 const historyList = document.getElementById("history-list");
 const clearBtn = document.getElementById("clear-history");
 
@@ -144,4 +149,27 @@ document.getElementById("call9").addEventListener("click", function () {
 clearBtn.addEventListener("click", function () {
     historyList.innerHTML = "";
 });
+
+
+// heart button functionality
+
+let totalHeartCount = 0;
+const heartSpan = document.getElementById("heart-count");
+
+function setupHeartButton(btnId) {
+    const btn = document.getElementById(btnId).addEventListener("click", function () {
+        totalHeartCount++;
+        heartSpan.innerText = totalHeartCount;
+    });
+}
+
+setupHeartButton("heart-btn-1");
+setupHeartButton("heart-btn-2");
+setupHeartButton("heart-btn-3");
+setupHeartButton("heart-btn-4");
+setupHeartButton("heart-btn-5");
+setupHeartButton("heart-btn-6");
+setupHeartButton("heart-btn-7");
+setupHeartButton("heart-btn-8");
+setupHeartButton("heart-btn-9");
 
