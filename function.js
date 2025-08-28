@@ -123,7 +123,7 @@ document.getElementById("call3").addEventListener("click", function () {
 });
 
 document.getElementById("call4").addEventListener("click", function () {
-    addHistory("এম্বুলেন্স", "1994-999999");
+    addHistory("অ্যাম্বুলেন্স", "1994-999999");
 });
 
 document.getElementById("call5").addEventListener("click", function () {
